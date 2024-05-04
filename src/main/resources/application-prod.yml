@@ -12,3 +12,7 @@ spring:
   config:
     activate:
       on-profile: production
+
+  sql:
+    init:
+      mode: always
