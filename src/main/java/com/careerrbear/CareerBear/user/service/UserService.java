@@ -2,7 +2,7 @@ package com.careerrbear.CareerBear.user.service;
 
 import com.careerrbear.CareerBear.user.model.Role;
 import com.careerrbear.CareerBear.user.model.UserAccount;
-import com.careerrbear.CareerBear.user.repository.UserRepository;
+import com.careerrbear.CareerBear.user.repository.UserAccountRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -10,10 +10,10 @@ import java.time.LocalDate;
 @Service
 public class UserService {
 
-    UserRepository userRepository;
+    UserAccountRepository userAccountRepository;
 
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserService(UserAccountRepository userAccountRepository) {
+        this.userAccountRepository = userAccountRepository;
     }
 
 
@@ -21,7 +21,7 @@ public class UserService {
         userData.setJoinDate(LocalDate.now());
         userData.setNewAccount(true);
         userData.setAccountRole(Role.USER);
-        return userRepository.save(userData);
+        return userAccountRepository.save(userData);
     }
 
 }
