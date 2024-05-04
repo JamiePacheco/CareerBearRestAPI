@@ -3,3 +3,10 @@ spring:
     name: CareerBearAPI
   jpa:
     show-sql: true
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+      hibernate: ERROR
