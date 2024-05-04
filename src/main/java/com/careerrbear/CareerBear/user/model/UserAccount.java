@@ -3,13 +3,14 @@ package com.careerrbear.CareerBear.user.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.LocalDate;
 
 @Entity
 @Data
-@org.springframework.data.relational.core.mapping.Table(name = "USERS")
-public class User{
+@Table(name = "UserAccount")
+public class UserAccount{
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

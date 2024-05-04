@@ -1,7 +1,7 @@
 package com.careerrbear.CareerBear.user.service;
 
 import com.careerrbear.CareerBear.user.model.Role;
-import com.careerrbear.CareerBear.user.model.User;
+import com.careerrbear.CareerBear.user.model.UserAccount;
 import com.careerrbear.CareerBear.user.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ public class UserService {
     }
 
 
-    public User saveUserData(User userData) {
+    public UserAccount saveUserData(UserAccount userData) {
         userData.setJoinDate(LocalDate.now());
         userData.setNewAccount(true);
         userData.setAccountRole(Role.USER);
