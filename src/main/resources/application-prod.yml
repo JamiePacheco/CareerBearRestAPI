@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     generate-ddl: true
     properties:
       hibernate:
@@ -16,3 +16,7 @@ spring:
   config:
     activate:
       on-profile: production
+
+  sqL:
+    init:
+      mode: always
