@@ -1,0 +1,15 @@
+
+CREATE TABLE USER_ACCOUNT (
+  user_id SERIAL PRIMARY KEY NOT NULL ,
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  password VARCHAR(100) NOT NULL,
+  new_account BOOLEAN NOT NULL,
+  birthday DATE NOT NULL,
+  join_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  role role NOT NULL
+);
+
+CREATE TYPE role AS ENUM
+('user', 'admin');
