@@ -3,17 +3,15 @@ package com.careerrbear.CareerBear.user.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
-
-
 import java.time.LocalDate;
 
-@Entity
 @Data
-@Table(name = "USER_ACCOUNT")
+@Entity
+@Table(name = "user_account")
 public class UserAccount{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(name = "FIRST_NAME")
