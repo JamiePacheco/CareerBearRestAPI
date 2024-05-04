@@ -3,6 +3,8 @@ package com.careerrbear.CareerBear.user.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.data.relational.core.mapping.Table;
+
 
 import java.time.LocalDate;
 
