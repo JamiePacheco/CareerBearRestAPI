@@ -8,6 +8,7 @@ spring:
     hibernate:
       ddl-auto: update
       database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
 
   config:
     activate:
