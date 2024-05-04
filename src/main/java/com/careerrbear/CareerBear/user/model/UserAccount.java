@@ -37,6 +37,7 @@ public class UserAccount{
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate joinDate;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "ROLE")
     private Role accountRole;
 }
