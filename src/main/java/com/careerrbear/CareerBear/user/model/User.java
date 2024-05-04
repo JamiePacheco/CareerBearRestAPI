@@ -5,11 +5,10 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name = "USERS")
+@org.springframework.data.relational.core.mapping.Table(name = "USERS")
 public class User{
 
     @Id
