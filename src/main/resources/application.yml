@@ -1,3 +1,5 @@
 spring:
   application:
     name: CareerBearAPI
+  jpa:
+    show-sql: true
