@@ -5,20 +5,16 @@ spring:
     password: ${PROD_DB_PASSWORD}
     name: career-bear
     driver-class-name: org.postgresql.Driver
-  jpa:
-    hibernate:
-      ddl-auto: create
-      database-platform: org.hibernate.dialect.PostgreSQLDialect
-    generate-ddl: true
-    database: postgresql
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-    defer-datasource-initialization: true
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#      database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    generate-ddl: true
+#    database: postgresql
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#    defer-datasource-initialization: true
   config:
     activate:
       on-profile: production
-
-  sql:
-    init:
-      mode: always
