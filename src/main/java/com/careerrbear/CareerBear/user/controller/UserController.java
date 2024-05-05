@@ -27,7 +27,19 @@ public class UserController {
         return ResponseEntity.ok(userService.saveUserData(user));
     }
 
-    @GetMapping("/authenticate-users")
+    @PostMapping("/delete-user")
+    public ResponseEntity<String> deleteUser(@RequestParam("userId") Long userAccountId) {
+        userService.deleteUserAccount(userAccountId);
+        return ResponseEntity.ok("Account Has Been Deleted");
+    }
+
+    @PostMapping("/delete-all-users")
+    public ResponseEntity<String> deleteAllUsers() {
+        userService.deleteAllUserAccounts();
+        return ResponseEntity.ok("All users have been deleted");
+    }
+
+    @GetMapping("/authenticate-user")
     public ResponseEntity<UserAccount> authenticateUser(@RequestParam("email") String email, @RequestParam("password") String password) {
         return ResponseEntity.ok(userService.authenticateUser(email, password));
     }

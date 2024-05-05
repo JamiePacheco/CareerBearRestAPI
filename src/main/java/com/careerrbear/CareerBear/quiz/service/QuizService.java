@@ -1,5 +1,6 @@
 package com.careerrbear.CareerBear.quiz.service;
 
+import com.careerrbear.CareerBear.exceptions.quizExceptions.DetailedQuizException;
 import com.careerrbear.CareerBear.quiz.model.DetailedQuiz;
 import com.careerrbear.CareerBear.quiz.model.QuizResults;
 import com.careerrbear.CareerBear.quiz.model.interactions.BearInteraction;
@@ -41,8 +42,12 @@ public class QuizService {
     }
 
     public List<DetailedQuiz> getDetailedQuizData(Long userAccountId) {
-        UserAccount userAccount = userAccountRepository.getUserAccountById(userAccountId).get();
+        Optional<UserAccount> userAccount = userAccountRepository.getUserAccountById(userAccountId);
 
-        return detailedQuizRepository.getDetailedQuizsByUserAccount(userAccount).get();
+        if (userAccount.isEmpty()) {
+            throw new DetailedQuizException("Error getting data: Account does not exist");
+        }
+
+        return detailedQuizRepository.getDetailedQuizsByUserAccount(userAccount.get()).get();
     }
 }

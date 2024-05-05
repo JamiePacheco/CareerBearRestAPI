@@ -34,6 +34,16 @@ public class UserService {
         return userAccountRepository.save(userData);
     }
 
+    public boolean deleteUserAccount(Long userAccountId) {
+        userAccountRepository.deleteById(userAccountId);
+        return true;
+    }
+
+    public boolean deleteAllUserAccounts() {
+        userAccountRepository.deleteAll();
+        return true;
+    }
+
     public UserAccount authenticateUser(String email, String password) {
         Optional<UserAccount> userAccount = userAccountRepository.getUserAccountByEmail(email);
         if (userAccount.isEmpty()) {
