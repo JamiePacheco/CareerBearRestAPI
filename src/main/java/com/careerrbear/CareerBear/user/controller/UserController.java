@@ -27,7 +27,7 @@ public class UserController {
         return ResponseEntity.ok(userService.saveUserData(user));
     }
 
-    @GetMapping("/get-user")
+    @GetMapping("/authenticate-users")
     public ResponseEntity<UserAccount> authenticateUser(@RequestParam("email") String email, @RequestParam("password") String password) {
         return ResponseEntity.ok(userService.authenticateUser(email, password));
     }
