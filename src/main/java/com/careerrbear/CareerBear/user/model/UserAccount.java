@@ -1,9 +1,11 @@
 package com.careerrbear.CareerBear.user.model;
 
+import com.careerrbear.CareerBear.quiz.model.DetailedQuiz;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Data
 @Entity
@@ -12,6 +14,7 @@ public class UserAccount{
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "USER_ACCOUNT_ID")
     private Long id;
 
     @Column(name = "FIRST_NAME")
@@ -26,7 +29,7 @@ public class UserAccount{
     @Column(name = "PASSWORD")
     private String password;
 
-    @Column(name = "NEW_ACOUNT")
+    @Column(name = "NEW_ACCOUNT")
     private boolean newAccount;
 
     @Column(name = "BIRTHDAY")
