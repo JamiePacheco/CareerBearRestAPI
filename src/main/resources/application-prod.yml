@@ -16,6 +16,7 @@ spring:
     activate:
       on-profile: production
 
+  port
   sqL:
     init:
       mode: always
