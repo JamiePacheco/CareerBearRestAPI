@@ -9,5 +9,5 @@ public interface UserAccountRepository extends JpaRepository<UserAccount, Long> 
 
     Optional<UserAccount> getUserAccountById(Long UserAccountId);
 
-
+    Optional<UserAccount> getUserAccountByEmail(String email);
 }

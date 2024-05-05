@@ -7,9 +7,11 @@ import com.careerrbear.CareerBear.quiz.repository.DetailedQuizRepository;
 import com.careerrbear.CareerBear.user.model.UserAccount;
 import com.careerrbear.CareerBear.user.repository.UserAccountRepository;
 import lombok.RequiredArgsConstructor;
+import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -35,9 +37,12 @@ public class QuizService {
         detailedQuiz.setDateTaken(LocalDate.now());
         detailedQuiz.setUserAccount(user.get());
 
-//        detailedQuiz.getBearInteractions().forEach(bearInteraction -> {
-//            bearInteraction.setDetailedQuiz(detailedQuiz);
-//        });
         return detailedQuizRepository.save(detailedQuiz);
+    }
+
+    public List<DetailedQuiz> getDetailedQuizData(Long userAccountId) {
+        UserAccount userAccount = userAccountRepository.getUserAccountById(userAccountId).get();
+
+        return detailedQuizRepository.getDetailedQuizsByUserAccount(userAccount).get();
     }
 }
