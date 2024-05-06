@@ -8,6 +8,7 @@ import com.careerrbear.CareerBear.user.repository.UserAccountRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -32,6 +33,10 @@ public class UserService {
         }
 
         return userAccountRepository.save(userData);
+    }
+
+    public List<UserAccount> getAllUserData() {
+        return userAccountRepository.findAll();
     }
 
     public boolean deleteUserAccount(Long userAccountId) {

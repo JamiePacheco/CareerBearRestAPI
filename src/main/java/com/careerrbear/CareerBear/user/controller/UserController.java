@@ -1,12 +1,11 @@
 package com.careerrbear.CareerBear.user.controller;
 
-import com.careerrbear.CareerBear.exceptions.userExceptions.LoginException;
 import com.careerrbear.CareerBear.user.model.UserAccount;
 import com.careerrbear.CareerBear.user.service.UserService;
-import org.apache.catalina.User;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/user")
@@ -44,4 +43,8 @@ public class UserController {
         return ResponseEntity.ok(userService.authenticateUser(email, password));
     }
 
+    @GetMapping("/get-all-users")
+    public ResponseEntity<List<UserAccount>> getAllUserData() {
+        return ResponseEntity.ok(userService.getAllUserData());
+    }
 }
