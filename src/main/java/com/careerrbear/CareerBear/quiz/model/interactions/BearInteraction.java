@@ -16,13 +16,16 @@ public class BearInteraction implements Serializable {
     @Column(name = "BEAR_INTERACTION_ID")
     private Long id;
 
-    @Column(name = "CAREER_BEAR_PROMPT", length = 500)
-    private String careerBearPrompt;
+    @OneToOne
+    @Column(name = "CAREER_BEAR_PROMPT")
+    @JoinColumn(name = "CAREER_BEAR_ PROMPT_ID", referencedColumnName = "CAREER_BEAR_ PROMPT_ID")
+    private CareerBearPrompt careerBearPrompt;
 
+    @OneToOne
     @Column(name = "USER_RESPONSE")
-    private String userResponse;
+    @JoinColumn(name = "USER_RESPONSE_ID", referencedColumnName = "USER_RESPONSE_ID")
+    private UserResponse userResponse;
 
-//    @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "DETAILED_QUIZ_ID", nullable = false)
-//    private DetailedQuiz detailedQuiz;
+    @Column(name = "POSITION")
+    private int position;
 }
