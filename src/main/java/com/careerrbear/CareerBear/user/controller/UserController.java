@@ -1,7 +1,9 @@
 package com.careerrbear.CareerBear.user.controller;
 
+import com.careerrbear.CareerBear.exceptions.userExceptions.LoginException;
 import com.careerrbear.CareerBear.user.model.UserAccount;
 import com.careerrbear.CareerBear.user.service.UserService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
