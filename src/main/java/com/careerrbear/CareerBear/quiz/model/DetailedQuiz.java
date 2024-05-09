@@ -5,7 +5,6 @@ import com.careerrbear.CareerBear.user.model.UserAccount;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Set;
 
