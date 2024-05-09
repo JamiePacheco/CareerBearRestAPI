@@ -19,10 +19,10 @@ public class PersonalityTrait implements Serializable {
     @Column(name = "TRAIT")
     private String trait;
 
-    @Column(name = "TRAIT_DESCRIPTION")
+    @Column(name = "TRAIT_DESCRIPTION", length = 400)
     private String traitDescription;
 
-    @Column(name = "TRAIT_LOGIC")
+    @Column(name = "TRAIT_LOGIC", length = 400)
     private String traitLogic;
 
 //    @ManyToOne(cascade = CascadeType.ALL)
