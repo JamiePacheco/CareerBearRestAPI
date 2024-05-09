@@ -13,6 +13,6 @@ public class UserResponse {
     @Column(name = "USER_RESPONSE_ID")
     private Long userResponseId;
 
-    @Column(name = "RESPONSE")
+    @Column(name = "RESPONSE", length = 400)
     private String response;
 }

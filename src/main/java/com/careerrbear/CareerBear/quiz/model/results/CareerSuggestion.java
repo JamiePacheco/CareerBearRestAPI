@@ -18,7 +18,7 @@ public class CareerSuggestion implements Serializable {
     @Column(name = "CAREER")
     private String career;
 
-    @Column(name = "CAREER_DESCRIPTION")
+    @Column(name = "CAREER_DESCRIPTION", length = 400)
     private String careerDescription;
 
 //    @ManyToOne(cascade = CascadeType.ALL)

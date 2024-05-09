@@ -21,7 +21,7 @@ public class QuizController {
 
     @PostMapping("/save-quiz-data")
     public ResponseEntity<DetailedQuiz> saveDetailedQuiz(@RequestParam(name = "userId") Long userAccountId, @RequestBody DetailedQuiz detailedQuiz) {
-        return ResponseEntity.ok(quizService.saveDetailedQuizData(detailedQuiz, userAccountId));
+        return ResponseEntity.ok(quizService.saveDetailedQuizData(detailedQuiz, userAccountId.longValue()));
     }
 
     @GetMapping("/get-quiz-data")
