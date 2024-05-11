@@ -50,4 +50,8 @@ public class QuizService {
 
         return detailedQuizRepository.getDetailedQuizsByUserAccount(userAccount.get()).get();
     }
+
+    public void deleteDetailedQuizData(Long detailedQuizId) {
+        userAccountRepository.deleteById(detailedQuizId);
+    }
 }
