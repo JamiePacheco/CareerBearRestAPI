@@ -1,6 +1,5 @@
 package com.careerrbear.CareerBear.quiz.model.results;
 
-import com.careerrbear.CareerBear.quiz.model.QuizResults;
 import jakarta.persistence.*;
 import lombok.Data;
 
