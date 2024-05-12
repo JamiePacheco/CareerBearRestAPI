@@ -1,4 +1,4 @@
-package com.careerrbear.CareerBear.quiz.model;
+package com.careerrbear.CareerBear.quiz.model.DetailedQuiz.interactions;
 
 import com.careerrbear.CareerBear.quiz.model.results.CareerSuggestion;
 import com.careerrbear.CareerBear.quiz.model.results.PersonalityTrait;

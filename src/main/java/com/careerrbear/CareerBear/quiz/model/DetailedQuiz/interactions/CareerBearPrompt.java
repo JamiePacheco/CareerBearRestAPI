@@ -1,4 +1,4 @@
-package com.careerrbear.CareerBear.quiz.model.interactions;
+package com.careerrbear.CareerBear.quiz.model.DetailedQuiz.interactions;
 
 
 import jakarta.persistence.*;

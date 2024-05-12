@@ -1,6 +1,6 @@
 package com.careerrbear.CareerBear.quiz.repository;
 
-import com.careerrbear.CareerBear.quiz.model.DetailedQuiz;
+import com.careerrbear.CareerBear.quiz.model.DetailedQuiz.interactions.DetailedQuiz;
 import com.careerrbear.CareerBear.user.model.UserAccount;
 import org.springframework.data.jpa.repository.JpaRepository;
 
