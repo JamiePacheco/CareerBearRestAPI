@@ -20,6 +20,9 @@ public class CareerSuggestion implements Serializable {
     @Column(name = "CAREER_DESCRIPTION", length = 400)
     private String careerDescription;
 
+    @Column(name = "CAREER_LOGIC", length = 400)
+    private String careerLogic;
+
 //    @ManyToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "QUIZ_RESULTS_ID")
 //    private QuizResults quizResults;
